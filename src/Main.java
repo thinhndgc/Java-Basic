@@ -4,21 +4,18 @@ import java.util.Scanner;
 public class Main {
 
 	private static Scanner input;
-	private static double a = 0;
-	private static double b = 0;
-	private static double c = 0;
-	private static double delta = 0;
-	private static double x1 = 0;
-	private static double x2 = 0;
-
+	
 	public static void main(String[] args) {
 		solveQuadratic();
 	}
 		
 	public static void solveQuadratic(){
+		double a = 0;
+		double b = 0;
+		double c = 0;
 		boolean check = false;
 		input = new Scanner(System.in);
-		while (check == false) {
+		while (!check) {
 			System.out.println("Insert a");
 			a = input.nextDouble();
 			if (a == 0) {
@@ -36,6 +33,9 @@ public class Main {
 	}
 	
 	public static void calQuadratic(double a, double b, double c){
+		double delta = 0;
+		double x1 = 0;
+		double x2 = 0;
 		delta = b*b - 4*a*c;
 		System.out.println("Delta = " + delta);
 		if (delta < 0) {
